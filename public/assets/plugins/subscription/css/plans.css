@@ -117,6 +117,7 @@
 .menu-btn span:before,
 .menu-btn span:after {
     background: var(--navbarMenuColor);
+    background-color: var(--navbarMenuColor);
 }
 
 .menu-btn.active span:before,
@@ -393,4 +394,12 @@ body .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 .plan--action-button::before {
     background: var(--planActionButtonBackgroundColor) !important;
     background: var(--planActionButtonBackgroundColor) !important;
+}
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+
+/* hero */
+.plan--hero-section {
+    background: var(--planHeaderBackgroundColor) !important;
 }

@@ -8,18 +8,8 @@
 
         {{-- meta --}}
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
-
-        {{-- icons --}}
-        <link rel="apple-touch-icon" sizes="180x180" href="{{asset('apple-touch-icon.png')}}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon-32x32.png')}}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon-16x16.png')}}">
-        <link rel="manifest" href="{{asset('site.webmanifest')}}">
-        <link rel="mask-icon" href="{{asset('safari-pinned-tab.svg')}}" color="#000000">
-        <meta name="msapplication-TileColor" content="#000000">
-        <meta name="theme-color" content="#000000">
-
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
 
 
 
@@ -54,19 +44,61 @@
 
 
 
+        {{-- icons --}}
+        <link rel="apple-touch-icon" sizes="180x180" href="{{asset('apple-touch-icon.png')}}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon-32x32.png')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon-16x16.png')}}">
+        <link rel="manifest" href="{{asset('site.webmanifest')}}">
+        <link rel="mask-icon" href="{{asset('safari-pinned-tab.svg')}}" color="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#000000">
+
+
+
+
+
+
 
         {{-- styles --}}
-        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/variables.css')}}">
-        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/vendors/bootstrap.css')}}" />
-        <link rel="stylesheet" href="{{url('assets/plugins/subscription/fonts/font-awesome/css/font-awesome.css')}}" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/variables-customization.css')}}">
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/bootstrap/css/bootstrap.min.css')}}" />
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/select2.css') }}">
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/scrollbar.css') }}">
         <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/vendors/magnific-popup.css')}}" />
         <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/vendors/splitting.css')}}" />
         <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/vendors/swiper.css')}}" />
         <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/vendors/animate.css')}}" />
         <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/main.css')}}" />
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/air-datepicker.css') }}">
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/globals.css')}}" />
         <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/plans.css')}}" />
-        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/scrollbar.css')}}" />
-        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/only-plans.css')}}" />
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/single-plan.css')}}" />
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/select-custom.css')}}" />
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/invoice.css')}}" />
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/custom-swal.css')}}" />
+
+
+
+        {{-- animation --}}
+
+
+
+
+
+        {{-- extra --}}
+        <link rel="stylesheet" href="{{url('assets/plugins/subscription/css/extras.css')}}" />
+
+
+
+
+        {{-- iziModal --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.6.1/css/iziModal.css"
+            integrity="sha512-uZ+G0SzK4GMUDUzxzbIeLGLjYgAhQ2KrIV4bWIP5o6URt5XVcn8S02eW6C1DH35bqq/XX1jYwlhhNPPIE1+q1A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 
 
 
@@ -75,8 +107,6 @@
         {{-- scripts --}}
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-
 
 
 
@@ -91,7 +121,6 @@
 
         {{-- styles --}}
         @yield('styles')
-
 
 
 
@@ -122,8 +151,10 @@
 
 
     {{-- body --}}
-    <body class="home page">
+    <body class="home page section--bg">
         <div class="container-page">
+
+
 
 
 
@@ -132,6 +163,10 @@
             <livewire:website.plans.components.plans-preloader />
 
 
+
+
+            {{-- progressBar --}}
+            @yield('progress')
 
 
 
@@ -195,7 +230,8 @@
 
 
         {{-- scripts --}}
-        <script src="{{url('assets/plugins/subscription/js/bootstrap.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/js/select2.min.js') }}"></script>
         <script src="{{url('assets/plugins/subscription/js/swiper.js')}}"></script>
         <script src="{{url('assets/plugins/subscription/js/splitting.min.js')}}"></script>
         <script src="{{url('assets/plugins/subscription/js/TweenMax.min.js')}}"></script>
@@ -212,6 +248,23 @@
         <script src="{{url('assets/plugins/subscription/js/ex-slider.js')}}"></script>
         <script src="{{url('assets/plugins/subscription/js/hero-started.js')}}"></script>
         <script src="{{url('assets/plugins/subscription/js/common.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/js/init-select.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/js/init-general.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/js/bubbles--bg.js')}}"></script>
+
+
+
+        {{-- swiper --}}
+        <script src="{{url('assets/plugins/subscription/js/init-swiper.js')}}"></script>
+
+
+
+
+
+        {{-- iziModal --}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.6.1/js/iziModal.min.js"
+            integrity="sha512-lR/2z/m/AunQdfBTSR8gp9bwkrjwMq1cP0BYRIZu8zd4ycLcpRYJopB+WsBGPDjlkJUwC6VHCmuAXwwPHlacww=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 
@@ -225,7 +278,31 @@
 
 
 
+
+
+        <script>
+            $(document).ready(function() {
+
+                $('.izi--modal').each(function() {
+
+                    width = $(this).attr('data-width');
+
+                    if (width) {
+
+                        $(this).iziModal({width: width});
+
+                    } else {
+
+                        $(this).iziModal();
+
+                    } // end if
+                });
+            })
+        </script>
         @yield('scripts')
+
+
+
 
 
 

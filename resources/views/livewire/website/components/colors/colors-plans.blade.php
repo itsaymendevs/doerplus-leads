@@ -86,6 +86,7 @@
 
 
             /* forPlan */
+            --planHeaderBackgroundColor: <?php echo "$settings->planHeaderBackgroundColor" ?> !important;
             --planActionButtonBackgroundColor: <?php echo "$settings->planActionButtonBackgroundColor" ?> !important;
 
 

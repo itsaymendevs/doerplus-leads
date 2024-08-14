@@ -112,11 +112,8 @@
                                         class="d-flex align-items-center justify-content-center justify-content-sm-start title--with-hr">
 
 
-                                        {{-- hr --}}
-                                        <hr>
-
                                         {{-- collapseToggler --}}
-                                        <div class="ps-2 splitting-text-anim-1 scroll-animate motion--slow collapse--title w-100"
+                                        <div class="splitting-text-anim-1 scroll-animate motion--slow collapse--title w-100"
                                             data-splitting="chars" data-animate="active">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span>Delivery Information</span>
@@ -337,9 +334,8 @@
                             <div class="m-title plan--single-title fs-6 mb-3 fw-semibold  pointer">
                                 <div
                                     class="d-flex align-items-center justify-content-center justify-content-sm-start title--with-hr">
-                                    <hr>
 
-                                    <div class="ps-2 splitting-text-anim-1 scroll-animate motion--slow w-100"
+                                    <div class="splitting-text-anim-1 scroll-animate motion--slow w-100"
                                         data-splitting="chars" data-animate="active" data-splitting="chars">
                                         <span>Promo</span>
                                     </div>
@@ -398,9 +394,8 @@
                             <div class="m-title plan--single-title fs-6 mb-3 fw-semibold  pointer">
                                 <div
                                     class="d-flex align-items-center justify-content-center justify-content-sm-start title--with-hr">
-                                    <hr>
 
-                                    <div class="ps-2 splitting-text-anim-1 scroll-animate motion--slow w-100"
+                                    <div class="splitting-text-anim-1 scroll-animate motion--slow w-100"
                                         data-splitting="chars" data-animate="active" data-splitting="chars">
                                         <span>Referral</span>
                                     </div>
@@ -572,11 +567,9 @@
                                                         class="d-flex align-items-center justify-content-center justify-content-sm-start title--with-hr">
 
 
-                                                        {{-- hr --}}
-                                                        <hr>
 
                                                         {{-- collapseToggler --}}
-                                                        <div class="ps-2 splitting-text-anim-1 scroll-animate collapse--title motion--slow w-100"
+                                                        <div class="splitting-text-anim-1 scroll-animate collapse--title motion--slow w-100"
                                                             data-splitting="chars" data-animate="active"
                                                             data-bs-toggle="collapse"
                                                             data-bs-target="#collapse--bundle-information"
@@ -859,13 +852,27 @@
 
 
 
-                                                {{-- 7: deliveryCharge --}}
+                                                {{-- 7: deliveryPrice --}}
+                                                @if (!is_null($instance?->deliveryPrice))
+
                                                 <div
                                                     class="d-flex invoice--tr justify-content-between align-items-center">
                                                     <h6 class="fw-500 my-0 fs-14">Delivery</h6>
-                                                    <h6 class='my-0 fw-500 fs-16'></h6>
+                                                    <h6 class='my-0 fw-500 fs-16'>
+
+                                                        {{-- 1: free --}}
+                                                        @if ($instance->deliveryPrice == 0)
+                                                        {{ "FREE" }}
+                                                        @else
+                                                        {{ number_format($instance?->deliveryPrice) }}
+                                                        @endif
+                                                        {{-- end if --}}
+
+                                                    </h6>
                                                 </div>
 
+                                                @endif
+                                                {{-- end if --}}
 
 
 
