@@ -11,10 +11,10 @@
     --selectPadding: 20px;
     --selectPaddingLG: 35px;
     --selectOptionPadding: 10px 20px;
-    --inputFontSize: 14px;
+    --inputFontSize: 13px;
     --inputFontSizeSM: 13px;
-    --inputHeight: 48px;
-    --inputMinHeight: 48px;
+    --inputHeight: 52px;
+    --inputMinHeight: 52px;
 }
 
 :root {
@@ -42,7 +42,7 @@
 
     --inputColor: #fff;
     --inputBorder: 1px solid var(--inputBorderColor);
-    --inputBorderColor: #323232;
+    --inputBorderColor: #151515;
     --inputBorderHoverColor: #87b2a9;
 
     --planTitleColor: #fff;

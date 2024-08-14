@@ -197,7 +197,8 @@
 
 
         {{-- scripts --}}
-        <script src="{{url('assets/plugins/subscription/js/bootstrap.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/js/select2.min.js') }}"></script>
         <script src="{{url('assets/plugins/subscription/js/swiper.js')}}"></script>
         <script src="{{url('assets/plugins/subscription/js/splitting.min.js')}}"></script>
         <script src="{{url('assets/plugins/subscription/js/TweenMax.min.js')}}"></script>
@@ -214,8 +215,9 @@
         <script src="{{url('assets/plugins/subscription/js/ex-slider.js')}}"></script>
         <script src="{{url('assets/plugins/subscription/js/hero-started.js')}}"></script>
         <script src="{{url('assets/plugins/subscription/js/common.js')}}"></script>
-
-
+        <script src="{{url('assets/plugins/subscription/js/init-select.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/js/init-general.js')}}"></script>
+        <script src="{{url('assets/plugins/subscription/js/bubbles--bg.js')}}"></script>
 
 
 

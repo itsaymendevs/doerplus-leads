@@ -2,12 +2,25 @@
 
 namespace App\Livewire\Leads;
 
+use App\Models\CountryCode;
 use Livewire\Component;
 
 class LeadsSubscribe extends Component
 {
     public function render()
     {
-        return view('livewire.leads.leads-subscribe');
-    }
-}
+
+
+        // 1: dependencies
+        $countryCodes = CountryCode::all();
+
+        return view('livewire.leads.leads-subscribe', compact('countryCodes'));
+
+
+    } // end function
+
+
+
+
+
+} // end class

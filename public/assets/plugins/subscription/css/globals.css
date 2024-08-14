@@ -21,7 +21,7 @@ body {
     border-radius: 6px !important;
     height: 48px !important;
     padding: 0px 20px !important;
-    font-size: 15px !important;
+    font-size: 13px !important;
     width: 100% !important;
     color: var(--textColor) !important;
     border: 1px solid var(--inputBorderColor) !important;
@@ -155,7 +155,7 @@ h6 {
     border-radius: 6px !important;
     height: 48px !important;
     padding: 0px 20px !important;
-    font-size: 14px !important;
+    font-size: 13px !important;
     width: 100% !important;
     color: var(--textColor) !important;
     border: var(--inputBorder) !important;
