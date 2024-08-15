@@ -49,7 +49,8 @@
 
 
     {{-- blobBG --}}
-    <livewire:leads.components.items.background-blob />
+    {{--
+    <livewire:leads.components.items.background-blob /> --}}
 
 
 
@@ -105,7 +106,7 @@
 
 
                         {{-- heading --}}
-                        <h4 class='text-center login--heading'>General Details</h4>
+                        <h4 class='text-center login--heading'>Get Your Personalized Product</h4>
 
 
 
@@ -523,11 +524,35 @@
 
 
 
-                    {{-- contactPerson --}}
+                    {{-- tradeLicense --}}
                     <div class="col-12 col-xl-6 mt-5">
+                        <div class="section--padding">
 
 
-                        <h6 class='text-center'>Trade License</h6>
+                            {{-- heading --}}
+                            <h6 class='text-center mt-0 mb-3'>Trade License</h6>
+
+
+
+                            {{-- uploadLabel --}}
+                            <div class="upload--wrapper">
+                                <label for="trade--file" class='upload--label'>
+
+
+                                    {{-- image --}}
+                                    <img src="{{ url('assets/plugins/subscription/images/placeholder.png') }}" alt=""
+                                        class='of-contain h-100 w-100'>
+
+
+                                    {{-- input --}}
+                                    <input type="file" class='d-none' id='trade--file'>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
                     </div>
                     {{-- endWrapper --}}
 
@@ -555,7 +580,7 @@
 
 
                             {{-- submit --}}
-                            <div class="d-flex justify-content-center mt-5">
+                            <div class="d-flex justify-content-center mt-5 no--button-motion">
                                 <livewire:leads.components.items.button-blob title='REQUEST' type="submit" />
                             </div>
 

@@ -56,7 +56,7 @@
 }
 .btn--blob:hover,
 .btn--blob:focus {
-    color: var(--textColor);
+    color: var(--textActiveColor) !important;
     border-radius: var(--planCardButtonRadius);
 }
 .btn--blob:hover:after,

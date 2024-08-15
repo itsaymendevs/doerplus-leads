@@ -13,13 +13,17 @@
     padding: 0px 30px;
 }
 
+.login--heading {
+    font-size: 30px;
+}
+
 @media (max-width: 575px) {
     .section--padding {
         padding: 0px 15px;
     }
 
     .login--heading {
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: 0.6px;
     }
 }
@@ -146,6 +150,8 @@
 }
 
 /* --------------------------------------------------- */
+/* --------------------------------------------------- */
+
 .login--footer {
     width: 100%;
     margin: auto;
@@ -167,9 +173,10 @@
 }
 
 /* --------------------------------------------- */
+/* --------------------------------------------- */
 
 .left--section {
-    border: 2px dashed #181818;
+    border: 2px solid #637d78;
     border-radius: 0px;
     background-color: #4c6560;
     padding-top: 25px;
@@ -192,4 +199,17 @@
     .personal--wrapper {
         margin: 0px;
     }
+}
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+
+.upload--label {
+    border: 2px dashed #232323;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
 }

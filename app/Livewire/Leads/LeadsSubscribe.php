@@ -3,8 +3,11 @@
 namespace App\Livewire\Leads;
 
 use App\Models\CountryCode;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 
+
+#[Layout('livewire.layouts.leads')]
 class LeadsSubscribe extends Component
 {
     public function render()
