@@ -106,7 +106,7 @@
 
 
                         {{-- heading --}}
-                        <h4 class='text-center login--heading'>On-Boarding</h4>
+                        <h4 class='text-center login--heading'>Contact Us</h4>
 
 
 
@@ -129,8 +129,9 @@
                                             <label><span>Business Name</span></label>
                                             <div class="d-flex align-items-center">
                                                 <i class="bi bi-person-badge"></i>
-                                                <input type="text" class='form--input text-center' autocomplete="off"
-                                                    placeholder="Company Name LLC." wire:model='instance.name' required>
+                                                <input type="text" class='form--input text-center no-events'
+                                                    autocomplete="off" required
+                                                    value='INNOCDE INFORMATION TECHNOLOGY CONSULTANTS LLC'>
                                             </div>
                                         </div>
                                     </div>
@@ -138,47 +139,6 @@
 
 
 
-
-
-
-                                {{-- 2.5: websiteURL --}}
-                                <div class="col-12 col-lg-6">
-                                    <div class="d-block">
-                                        <div class="login--input form--input-wrapper mb-4">
-
-                                            <label><span>Website URL</span></label>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bi bi-link-45deg"></i>
-                                                <input type="url" class='form--input text-center' autocomplete="off"
-                                                    wire:model='instance.websiteURL' required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-
-
-
-
-
-
-                                {{-- 2: email --}}
-                                <div class="col-12 col-lg-6">
-                                    <div class="d-block">
-                                        <div class="login--input form--input-wrapper mb-4">
-
-                                            <label><span>Official Email</span></label>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bi bi-envelope"></i>
-                                                <input type="emal" class='form--input text-center' autocomplete="off"
-                                                    wire:model='instance.email' required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
 
 
@@ -198,8 +158,10 @@
                                             <label><span>Full Address</span></label>
                                             <div class="d-flex align-items-center">
                                                 <i class="bi bi-pin-map-fill"></i>
-                                                <input type="text" class='form--input text-center' autocomplete="off"
-                                                    wire:model='instance.address' required>
+                                                <input type="text" class='form--input text-center  no-events'
+                                                    autocomplete="off"
+                                                    value='Warehouse No. 17, Al Khayat Avenue, Al Quoz Ind Area 1, Dubai – UAE'
+                                                    required>
                                             </div>
                                         </div>
                                     </div>
@@ -226,6 +188,27 @@
 
 
 
+                                {{-- 2: email --}}
+                                <div class="col-12 col-lg-4">
+                                    <div class="d-block">
+                                        <div class="login--input form--input-wrapper mb-4">
+
+                                            <label><span>Official Email</span></label>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-envelope"></i>
+                                                <input type="emal" class='form--input text-center  no-events'
+                                                    autocomplete="off" value='hello@doer.ae' required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
 
                                 {{-- 4: Landline --}}
                                 <div class="col-12 col-lg-4" wire:ignore>
@@ -240,7 +223,7 @@
 
 
                                             {{-- select --}}
-                                            <div class="form--select-wrapper side--left text-center"
+                                            <div class="form--select-wrapper side--left text-center  no-events"
                                                 style="min-width: 90px !important; width: 90px !important">
                                                 <select class='form--select init--select'
                                                     data-instance='instance.landlineKey' value='+971' required>
@@ -257,9 +240,9 @@
 
                                             {{-- input --}}
                                             <input type="text" pattern="[0-9]+"
-                                                class='form--input side--right text-center'
-                                                style="width: 100% !important" wire:model='instance.landline'
-                                                minlength="9" maxlength="9" required>
+                                                class='form--input side--right text-center  no-events'
+                                                style="width: 100% !important" value='44308556' minlength="9"
+                                                maxlength="9" required>
 
 
 
@@ -302,7 +285,7 @@
 
 
                                             {{-- select --}}
-                                            <div class="form--select-wrapper side--left text-center"
+                                            <div class="form--select-wrapper side--left text-center  no-events"
                                                 style="min-width: 90px !important; width: 90px !important">
                                                 <select class='form--select init--select'
                                                     data-instance='instance.phoneKey' value='+971' required>
@@ -319,8 +302,8 @@
 
                                             {{-- input --}}
                                             <input type="text" pattern="[0-9]+"
-                                                class='form--input side--right text-center'
-                                                style="width: 100% !important" wire:model='instance.phone' minlength="9"
+                                                class='form--input side--right text-center  no-events'
+                                                style="width: 100% !important" value='586889344' minlength="9"
                                                 maxlength="9" required>
 
 
@@ -334,42 +317,6 @@
 
                                 </div>
                                 {{-- endMobile --}}
-
-
-
-
-
-
-
-
-
-
-                                {{-- --------------------------------- --}}
-                                {{-- --------------------------------- --}}
-
-
-
-
-
-
-
-
-                                {{-- 5: name --}}
-                                <div class="col-12 col-lg-4">
-                                    <div class="d-block">
-                                        <div class="login--input form--input-wrapper mb-4">
-
-                                            <label><span>Expected Users</span></label>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bi bi-people-fill"></i>
-                                                <input type="text" class='form--input text-center' autocomplete="off"
-                                                    wire:model='instance.users' required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
 
 
 
@@ -406,23 +353,49 @@
 
 
 
+
+
+
+
+
                     {{-- contactPerson --}}
-                    <div class="col-12 col-xl-6 mt-5">
+                    <div class="col-12 col-xl-12 mt-5">
 
                         <div class="personal--wrapper section--padding">
                             <div class="row">
 
 
                                 {{-- 1: name --}}
-                                <div class="col-12">
+                                <div class="col-12 col-lg-6">
                                     <div class="d-block">
                                         <div class="login--input form--input-wrapper mb-4">
 
                                             <label><span>Contact Person</span></label>
                                             <div class="d-flex align-items-center">
                                                 <i class="bi bi-person-badge"></i>
-                                                <input type="text" class='form--input text-center' autocomplete="off"
-                                                    wire:model='instance.contactPerson' required>
+                                                <input type="text" class='form--input text-center  no-events'
+                                                    autocomplete="off" value='Sales Team' required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                                {{-- 2: email --}}
+                                <div class="col-12 col-lg-6">
+                                    <div class="d-block">
+                                        <div class="login--input form--input-wrapper mb-4">
+
+                                            <label><span>Email Address</span></label>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-envelope"></i>
+                                                <input type="text" class='form--input text-center  no-events'
+                                                    autocomplete="off" value='success@doer.ae' required>
                                             </div>
                                         </div>
                                     </div>
@@ -435,14 +408,8 @@
 
 
 
-
-
-
-
-
-
                                 {{-- 2: phone --}}
-                                <div class="col-12" wire:ignore>
+                                <div class="col-12 col-lg-6" wire:ignore>
                                     <div class="login--input form--input-wrapper mb-4">
 
                                         <label><span>Phone Number</span></label>
@@ -453,7 +420,7 @@
 
 
                                             {{-- select --}}
-                                            <div class="form--select-wrapper side--left text-center"
+                                            <div class="form--select-wrapper side--left text-center  no-events"
                                                 style="min-width: 90px !important; width: 90px !important">
                                                 <select class='form--select init--select'
                                                     data-instance='instance.contactPersonPhoneKey' value='+971'
@@ -472,9 +439,9 @@
 
                                             {{-- input --}}
                                             <input type="text" pattern="[0-9]+"
-                                                class='form--input side--right text-center'
-                                                style="width: 100% !important" wire:model='instance.contactPersonPhone'
-                                                minlength="9" maxlength="9" required>
+                                                class='form--input side--right text-center  no-events'
+                                                style="width: 100% !important" value='586889344' minlength="9"
+                                                maxlength="9" required>
 
 
 
@@ -499,7 +466,7 @@
 
 
                                 {{-- 3: Whatsapp --}}
-                                <div class="col-12" wire:ignore>
+                                <div class="col-12 col-lg-6" wire:ignore>
                                     <div class="login--input form--input-wrapper mb-4">
 
                                         <label><span>Whatsapp Number</span></label>
@@ -510,7 +477,7 @@
 
 
                                             {{-- select --}}
-                                            <div class="form--select-wrapper side--left text-center"
+                                            <div class="form--select-wrapper side--left text-center  no-events"
                                                 style="min-width: 90px !important; width: 90px !important">
                                                 <select class='form--select init--select'
                                                     data-instance='instance.contactPersonWhatsappKey' value='+971'
@@ -529,10 +496,9 @@
 
                                             {{-- input --}}
                                             <input type="text" pattern="[0-9]+"
-                                                class='form--input side--right text-center'
-                                                style="width: 100% !important"
-                                                wire:model='instance.contactPersonWhatsapp' minlength="9" maxlength="9"
-                                                required>
+                                                class='form--input side--right text-center  no-events'
+                                                style="width: 100% !important" value='586889344' minlength="9"
+                                                maxlength="9" required>
 
 
 
@@ -564,68 +530,6 @@
 
 
 
-                    {{-- ---------------------------------------------------- --}}
-                    {{-- ---------------------------------------------------- --}}
-                    {{-- ---------------------------------------------------- --}}
-                    {{-- ---------------------------------------------------- --}}
-
-
-
-
-
-
-
-
-
-
-
-
-                    {{-- tradeLicense --}}
-                    <div class="col-12 col-xl-6 mt-5">
-                        <div class="section--padding">
-
-
-                            {{-- heading --}}
-                            <h6 class='text-center mt-0 mb-3'>Trade License</h6>
-
-
-
-                            {{-- uploadLabel --}}
-                            <div class="upload--wrapper">
-                                <label for="trade--file" class='upload--label'>
-
-
-                                    {{-- image --}}
-                                    @if ($isUploaded)
-
-                                    <img src="{{ url('assets/plugins/subscription/images/success.png') }}" alt=""
-                                        class='of-contain h-100 w-100' style="padding: 70px">
-
-
-                                    @else
-
-                                    <img src="{{ url('assets/plugins/subscription/images/placeholder.png') }}" alt=""
-                                        class='of-contain h-100 w-100'>
-
-                                    @endif
-                                    {{-- end if --}}
-
-
-
-                                    {{-- input --}}
-                                    <input type="file" class='hidden' id='trade--file' wire:model='instance.tradeFile'
-                                        wire:change='uploaded' required accept="application/pdf, image/*" />
-
-                                </label>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-                    {{-- endWrapper --}}
-
-
 
 
 
@@ -636,6 +540,9 @@
                     {{-- ---------------------------------------------------- --}}
                     {{-- ---------------------------------------------------- --}}
                     {{-- ---------------------------------------------------- --}}
+
+
+
 
 
 
@@ -644,30 +551,8 @@
 
 
                     {{-- submit --}}
-                    <div class="col-12 col-xl-12">
+                    <div class="col-12 col-xl-12 mt-3">
                         <div class="footer--wrapper px-3">
-
-
-
-
-                            {{-- topRow --}}
-                            <div class="row justify-content-center">
-                                <div class="col-6">
-                                    <div class="d-flex justify-content-center mt-5 no--button-motion"
-                                        wire:loading.class='processing--button-wrap'
-                                        wire:target='store, instance.tradeFile'>
-                                        <livewire:leads.components.items.button-blob title='SUBMIT' type="submit" />
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-
-
-                            {{-- ----------------------------------------- --}}
-                            {{-- ----------------------------------------- --}}
 
 
 
@@ -682,12 +567,9 @@
                                     <div class="d-flex justify-content-start justify-content-lg-start">
                                         <p class='login--forgot'><a class='fw-semibold'
                                                 style="color: inherit; text-decoration: none;"
-                                                href="{{ route('leads.contact') }}">Get in touch</a>
-                                        </p>
+                                                href="{{ route('leads.subscribe') }}">Get DOer</a></p>
                                     </div>
                                 </div>
-
-
 
 
 
@@ -704,7 +586,7 @@
 
                                 {{-- copyrights --}}
                                 <div class="col-7 order-2 order-md-3 col-md-4 px-0">
-                                    <div class="d-flex justify-content-end">
+                                    <div class="d-flex justify-content-end ">
                                         <p class='login--forgot fw-semibold'>@ {{ date('Y') }} Right Reserved</p>
                                     </div>
                                 </div>
@@ -717,6 +599,8 @@
                         </div>
                     </div>
                     {{-- endCol --}}
+
+
 
 
 

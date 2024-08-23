@@ -1,6 +1,8 @@
 <?php
 
+use App\Livewire\Leads\LeadsContact;
 use App\Livewire\Leads\LeadsSubscribe;
+use App\Livewire\Leads\LeadsSubscribeSuccess;
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 
@@ -86,3 +88,10 @@ if (env('APP_ENV') == 'production') {
 
 // 1: leads
 Route::get('/', LeadsSubscribe::class)->name('leads.subscribe');
+Route::get('/success', LeadsSubscribeSuccess::class)->name('leads.success');
+
+
+
+
+// 2: reach-us
+Route::get('/contact-us', LeadsContact::class)->name('leads.contact');
